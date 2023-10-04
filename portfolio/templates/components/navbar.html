@@ -1,3 +1,5 @@
+{% load static %}
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand fw=bold fst-italic" href="/">Kevin Serrano</a>
@@ -23,7 +25,7 @@
                     <a class="nav-link" href="#">Contact</a>
                 </li>
                 <li class="nav-item d-flex align-items-center">
-                    <a class="btn btn-primary btn-sm" href="#">Download CV</a>
+                    <a class="btn btn-primary btn-sm" href="{% static 'portfolio/CV-Serrano-Kevin-Backend-developer.pdf' %}" target="_blank">Download CV</a>
                 </li>
             </ul>
         </div>
