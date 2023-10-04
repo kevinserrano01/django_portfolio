@@ -5,13 +5,23 @@
 <h1>Posts</h1>
 
 {% for post in posts %}
-        <p>{{ post.title }}</p>
-        <p>{{ post.description|striptags|truncatechars:100 }}</p>
-        <p>{{ post.date|date:'M d Y'|upper}}</p>
-        <img src="{{ post.image.url }}" alt="{{ post.title }}" width="300px">
-        <a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a>
+
+<div class="p-3">
+        <div class="card card-body bg-black">
+                <div class="row">
+                        <div class="col-md-3">
+                                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fliud" width="300px">
+                        </div>
+                        <div class="col-md-9">
+                                <p>{{ post.title }}</p>
+                                <p>{{ post.description|striptags|truncatechars:100 }}</p>
+                                <p>{{ post.date|date:'M d Y'|upper}}</p>
+                                <a href="{% url 'blog:post_detail' post.id %}" class="btn btn-primary">{{post.title}}</a>
+                        </div>
+                </div>
+        </div>
+</div>
+
 {% endfor %}
 
 {% endblock %}
-
-
