@@ -7,5 +7,17 @@
 </head>
 <body>
     <h1>Home</h1>
+
+    {% for project in projects %}
+            <p>{{ project.title }}</p>
+            <p>{{ project.description }}</p>
+            <img src="{{project.image.url}}" alt="{{project.title}}" width="400px">
+            {% if project.url %}
+                <a href="{{project.url}}">{{project.url}}</a>
+            {% endif %}
+            
+            
+    {% endfor %}
+
 </body>
 </html>
