@@ -7,6 +7,6 @@
 <p>{{ post.title }}</p>
 <p>{{ post.date|date:'M d Y'|upper }}</p>
 <p>{{ post.description|safe}}</p>
-<img src="{{ post.image.url }}" alt="{{ post.title }}">
+<img src="{{ post.image.url }}" alt="{{ post.title }}" width="400px">
 
 {% endblock %}
