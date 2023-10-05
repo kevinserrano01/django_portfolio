@@ -2,11 +2,19 @@
 
 {% block content %}
 
-<h1>Detail Post</h1>
+<div class="text-center">
+    <h1>Detail Post</h1>
+    
+    <h2>{{ post.title }}</h2>
+    
+    <h5 class="my-2 h5 text-muted">{{ post.date|date:'M d Y'|upper }}</h5>
+    
+    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+    
+    <div class="my-4">
+        <p>{{ post.description|safe}}</p>
+    </div>
+</div>
 
-<p>{{ post.title }}</p>
-<p>{{ post.date|date:'M d Y'|upper }}</p>
-<p>{{ post.description|safe}}</p>
-<img src="{{ post.image.url }}" alt="{{ post.title }}" width="400px">
 
 {% endblock %}
