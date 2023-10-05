@@ -3,41 +3,39 @@
 {% block content %}
 {% load static %}
 
-<header class="row bg-black">
+<header class="row bg-black mt-4">
     <div class="col-md-4">
-        <img src="{% static 'portfolio/fotoPerfil.jpg' %}" alt="Foto Perfil" width="400px">
+        <img src="{% static 'portfolio/fotoPerfil.jpg' %}" alt="Foto Perfil" class="img-fluid rounded-circle">
     </div>
 
     <div class="col-md-8 my-auto">
-        <h1>I am <strong>Kevin Serrano</strong></h1>
+        <h1><strong>Kevin Serrano</strong></h1>
         <h3>Python Developer</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, consequuntur culpa. Fuga eveniet, dolor
             aliquid amet vitae cum iste laudantium! Inventore enim magnam, eveniet quaerat nemo qui asperiores
             voluptatum porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, consequuntur culpa.
             Fuga eveniet, dolor aliquid amet vitae cum iste laudantium! Inventore enim magnam, eveniet quaerat nemo qui
             asperiores voluptatum porro</p>
-        <a href="{% static 'portfolio/CV-Serrano-Kevin-Backend-developer.pdf' %}"
-            class="btn btn-primary btn-lg rounded-0 my-3">Download CV</a>
+        <a href="{% static 'portfolio/CV-Serrano-Kevin-Backend-developer.pdf' %}" class="btn btn-primary btn-lg rounded my-3" target="_blank">Download CV</a>
     </div>
 </header>
 
 <div class="row my-4 text-center">
 
     <h3>My Projects</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil numquam, in quos provident placeat autem. Ab
-        facere culpa modi nobis ut. Maiores atque, inventore non aliquam aliquid sunt! Ab, nobis!</p>
+    <p>Proyectos realizados a medida que voy aprendiendo nuevas tecnologias como Pyhon, Django, Flask, MySQL, Javascript, entre otras librerias.</p>
 
     {% for project in projects %}
     <div class="col-md-4 p-4">
         <div class="card bg-black card-project text-light">
-            <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top ">
+            <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top rounded">
 
             <div class="card-body">
                 <h2>{{project.title}}</h2>
                 <p>{{project.description}}</p>
 
                 {% if project.url %}
-                <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm" target="_blank">{{project.url}}</a>
+                <a href="{{project.url}}" class="btn btn-primary rounded-0 btn-sm" target="_blank">view</a>
                 {% endif %}
 
             </div>

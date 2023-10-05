@@ -10,3 +10,7 @@ body {
     border: 1px solid #ffffff;
     cursor: pointer;
 }
+
+.roundedFoto {
+    border-radius: 20px;
+}

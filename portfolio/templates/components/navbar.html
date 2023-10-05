@@ -10,22 +10,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'blog:posts' %}">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
                 <li class="nav-item d-flex align-items-center">
-                    <a class="btn btn-primary btn-sm" href="{% static 'portfolio/CV-Serrano-Kevin-Backend-developer.pdf' %}" target="_blank">Download CV</a>
+                    <a class="btn btn-primary rounded btn-sm" href="{% static 'portfolio/CV-Serrano-Kevin-Backend-developer.pdf' %}" target="_blank">Download CV</a>
                 </li>
             </ul>
         </div>
