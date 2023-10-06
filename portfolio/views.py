@@ -1,6 +1,16 @@
 from django.shortcuts import render
-from .models import Project
+from .models import *
 
 def home(request):
     projects = Project.objects.all()
-    return render(request, 'home.html', {'projects':projects})
+    languagesFrontend = Frontend.objects.all()
+    languagesBackend = Backend.objects.all()
+    herramientas = Tools.objects.all()
+
+    data = {
+        'projects':projects,
+        'frontend': languagesFrontend,
+        'backend': languagesBackend,
+        'tools': herramientas
+    }
+    return render(request, 'home.html', data)

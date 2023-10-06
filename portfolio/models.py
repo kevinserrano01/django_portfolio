@@ -10,3 +10,24 @@ class Project(models.Model):
 
     def __str__(self) -> str:
         return self.title
+    
+class Frontend(models.Model):
+    title = CharField(max_length=100)
+    image = ImageField(upload_to='portfolio/frontend/')
+
+    def __str__(self) -> str:
+        return self.title
+    
+class Backend(models.Model):
+    title = CharField(max_length=100)
+    image = ImageField(upload_to='portfolio/backend/')
+
+    def __str__(self) -> str:
+        return self.title
+    
+class Tools(models.Model):
+    title = CharField(max_length=100)
+    image = ImageField(upload_to='portfolio/backend/')
+
+    def __str__(self) -> str:
+        return self.title

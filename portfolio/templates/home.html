@@ -10,19 +10,64 @@
 
     <div class="col-md-8 my-auto">
         <h1><strong>Kevin Serrano</strong></h1>
-        <h3>Python Developer</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, consequuntur culpa. Fuga eveniet, dolor
-            aliquid amet vitae cum iste laudantium! Inventore enim magnam, eveniet quaerat nemo qui asperiores
-            voluptatum porro. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, consequuntur culpa.
-            Fuga eveniet, dolor aliquid amet vitae cum iste laudantium! Inventore enim magnam, eveniet quaerat nemo qui
-            asperiores voluptatum porro</p>
+        <h3>Backend Developer</h3>
+        <p>Hola soy Kevin Serrano, un apasionado por la programación con un enfoque sólido en el lenguaje Python. Mi habilidad para trabajar en equipo y comunicarme eficazmente, combinada con mi capacidad para resolver problemas de manera creativa, me ha permitido desempeñar un papel fundamental en el desarrollo de software. Soy un firme creyente en el aprendizaje continuo y me mantengo al tanto de las últimas tendencias y avances en tecnología, lo que me permite adaptarme rápidamente a nuevos desafíos. </p>
         <a href="{% static 'portfolio/CV-Serrano-Kevin-Backend-developer.pdf' %}" class="btn btn-primary btn-lg rounded my-3" target="_blank">Download CV</a>
     </div>
 </header>
 
-<div class="row my-4 text-center">
+<hr>
 
-    <h3>My Projects</h3>
+<div class="row my-4 text-center">
+    <h3>FRONTEND</h3>
+    {% for language in frontend %}
+    <div class="logos col-md-4 p-4">
+        <div class="card bg-black text-light">
+            <img src="{{language.image.url}}" alt="{{language.title}}" class="rounded">
+            <div class="card-body">
+                <h2>{{language.title}}</h2>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<hr>
+
+<div class="row my-4 text-center">
+    <h3>BACKEND</h3>
+    {% for language in backend %}
+    <div class="col-md-4 p-4">
+        <div class="card bg-black text-light">
+            <img src="{{language.image.url}}" alt="{{language.title}}" class="card-img-top rounded">
+            <div class="card-body">
+                <h2>{{language.title}}</h2>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<hr>
+
+<div class="row my-4 text-center">
+    <h3>HERRAMIENTAS</h3>
+    {% for tool in tools %}
+    <div class="col-md-4 p-4">
+        <div class="card bg-black text-light">
+            <img src="{{tool.image.url}}" alt="{{tool.title}}" class="card-img-top rounded">
+            <div class="card-body">
+                <h2>{{tool.title}}</h2>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<hr>
+
+<div class="row my-4 text-center">
+    <h3>MIS PROYECTOS</h3>
     <p>Proyectos realizados a medida que voy aprendiendo nuevas tecnologias como Pyhon, Django, Flask, MySQL, Javascript, entre otras librerias.</p>
 
     {% for project in projects %}
@@ -33,16 +78,14 @@
             <div class="card-body">
                 <h2>{{project.title}}</h2>
                 <p>{{project.description}}</p>
-
                 {% if project.url %}
                 <a href="{{project.url}}" class="btn btn-primary rounded-0 btn-sm" target="_blank">view</a>
                 {% endif %}
-
             </div>
+
         </div>
     </div>
     {% endfor %}
-
 </div>
 
 {% endblock %}
