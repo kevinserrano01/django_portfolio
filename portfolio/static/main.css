@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(255, 176, 176);
+    background-color: #000000;
 }
 
 .bg-black {
-    background-color: #fd2b2b;
+    background-color: #050505;
 }
 
 .card-project:hover {
@@ -13,8 +13,4 @@ body {
 
 .roundedFoto {
     border-radius: 20px;
-}
-
-.logos {
-    width: 200px;
 }

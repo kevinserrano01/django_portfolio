@@ -14,3 +14,10 @@ def home(request):
         'tools': herramientas
     }
     return render(request, 'home.html', data)
+
+def get_projects(request):
+    projects = Project.objects.all()
+    data = {
+        'projects':projects
+    }
+    return render(request, 'projects.html', data)

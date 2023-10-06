@@ -7,7 +7,7 @@ from blog import urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
+    path('', include('portfolio.urls')),
     path('blog/', include('blog.urls'), name='posts'),
 ]
 
